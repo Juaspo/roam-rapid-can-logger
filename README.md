@@ -2,10 +2,12 @@
 
 Connect button switch to the GPIO pins as shown in the picture below
 
+GPIO pins
+
 ![gpio_pins](https://user-images.githubusercontent.com/20067958/196567847-fefdffec-0491-460a-b7cf-abc0ed7bfe57.png)
 
-GPIO pins
 green pins = RTC (pins 1-10), red pin (pin 35) = LED, yellow pin (pin 37) = Button, black pin (pin 39) = GND
+
 ![20221019_014953](https://user-images.githubusercontent.com/20067958/196567590-e8fa9499-6ca0-46b7-9848-916dc885955a.jpg)
 
 
