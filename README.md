@@ -20,3 +20,5 @@ To start logging data, press the button once. The green LED will light up indica
 To stop logging data just press the button again and the LED should turn off, indicating that that data collection has been stopped.
 
 Note! During data logging, If no data is received within 2 seconds the logging sequence will stop to indicate that no further data is being received
+
+CAN data is stored under /home/pi/canlogs/
