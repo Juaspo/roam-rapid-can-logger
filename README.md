@@ -1,6 +1,7 @@
 # roam-rapid-can-logger
 
 Connect button switch to the GPIO pins as shown in the picture below
+
 ![gpio_pins](https://user-images.githubusercontent.com/20067958/196567847-fefdffec-0491-460a-b7cf-abc0ed7bfe57.png)
 
 GPIO pins
