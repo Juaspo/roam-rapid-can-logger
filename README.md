@@ -25,3 +25,5 @@ To stop logging data just press the button again and the LED should turn off, in
 Note! During data logging, If no data is received within 2 seconds the logging sequence will stop to indicate that no further data is being received
 
 CAN data is stored under /home/pi/canlogs/
+
+For boot startup of script, a startup command has been added to the end of ~/.bashrc
