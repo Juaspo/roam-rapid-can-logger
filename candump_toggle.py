@@ -21,7 +21,7 @@ btn_pin = 37
 GPIO.setwarnings(False)  # Ignore warnings
 GPIO.setmode(GPIO.BOARD)  # Use physical board layout
 GPIO.setup(led_pin, GPIO.OUT)  # Set led pin to output
-GPIO.setup(btn_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)  # Set pin 16 to be input with pulldown
+GPIO.setup(btn_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)  # Set pin 35 to be input with pullup
 #GPIO.output(led_pin, GPIO.LOW)
 GPIO.add_event_detect(btn_pin, GPIO.RISING, callback=lambda x: button_callback(), bouncetime=300)
 
@@ -41,7 +41,9 @@ def button_callback():
     GPIO.add_event_detect(btn_pin, GPIO.RISING, callback=lambda x: button_callback(), bouncetime=300)
 
 def toggle_candump():
-    '''Toggle mode function'''
+    '''
+    Toggle mode function
+    '''
 
     global run_dump
     if run_dump:
@@ -85,7 +87,9 @@ def run_can_dump():
     print("can0 set to 250kbit/s")
     print("running candump...")
     GPIO.output(led_pin, GPIO.HIGH)
-    os.system('stdbuf -i0 -o0 candump -T 2000 -ta can0 > /home/pi/canlogs/can-$(date +"%Y%m%d_%H%M%S").txt')
+    pth = os.path.expanduser('~/canlogs')
+    os.makedirs(pth, exist_ok=True)
+    os.system('stdbuf -i0 -o0 candump -T 2000 -ta can0 > ~/canlogs/can-$(date +"%Y%m%d_%H%M%S").txt')
     GPIO.output(led_pin, GPIO.LOW)
     run_dump = False
 
@@ -95,5 +99,7 @@ user_input = None
 while user_input != "":
     user_input = input("Press enter to quit\n")  # Run until someone presses enter
 
+if run_dump:
+    stop_candump()
 
 GPIO.cleanup()  # Clean up
