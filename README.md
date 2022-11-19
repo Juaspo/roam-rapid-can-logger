@@ -4,11 +4,11 @@ Connect button switch to the GPIO pins as shown in the picture below
 
 GPIO pins
 
-![gpio_pins](https://user-images.githubusercontent.com/20067958/196567847-fefdffec-0491-460a-b7cf-abc0ed7bfe57.png)
-
-green pins = RTC (pins 1-10), red pin (pin 35) = LED, yellow pin (pin 37) = Button, black pin (pin 39) = GND
-
-![20221019_014953](https://user-images.githubusercontent.com/20067958/196567590-e8fa9499-6ca0-46b7-9848-916dc885955a.jpg)
+![image](https://user-images.githubusercontent.com/20067958/202839700-91c0e9ee-aa42-49f4-af7a-ca2ca671db20.png)
+<br>green pins = RTC (pins 1-10)
+<br>red pin (pin 35) = LED
+<br>yellow pin (pin 38) = Button
+<br>black pin (pin 39) = GND
 
 
 Connect CAN wires to CAN0 can port and USB for power.
